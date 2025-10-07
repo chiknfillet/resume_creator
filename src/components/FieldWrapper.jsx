@@ -1,3 +1,5 @@
+import '../styles/field-wrapper.css'
+
 function FieldWrapper({children, title}) {
     return (
         <section className="form-field">

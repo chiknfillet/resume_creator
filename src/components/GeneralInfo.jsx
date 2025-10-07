@@ -1,7 +1,7 @@
 import FieldWrapper from "./FieldWrapper";
 import '../styles/general-info.css'
 
-function GeneralInfo() {
+function GeneralInfo({ generalInfo, handleChange }) {
     function isValidEmail(email) {
         return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
     }
@@ -18,17 +18,26 @@ function GeneralInfo() {
         <FieldWrapper title={'General Info'}>
             <input 
                 type="text" 
+                name="name"
                 placeholder="Full Name (e.g., John Doe)"
+                value={generalInfo.name}
+                onChange={handleChange}
                 required
             />
             <input 
                 type="email" 
+                name="email"
                 placeholder="Email (e.g., johndoe@example.com)"
+                value={generalInfo.email}
+                onChange={handleChange}
                 required
             />
-            <input 
-                type="number" 
-                placeholder="Phone Number (e.g., (123) 456-789)"
+            <input
+                type="text" 
+                name="phone"
+                placeholder="Phone Number (e.g., (123) 456-7890)"
+                value={generalInfo.phone}
+                onChange={handleChange}
                 required
             />
         </FieldWrapper>
