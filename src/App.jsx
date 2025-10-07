@@ -37,7 +37,6 @@ function App() {
       <div>
         <ResumeDisplay 
           generalInfo={generalInfo}
-          handleChange={handleGeneralInfoChange}
         />
       </div>
     </main>

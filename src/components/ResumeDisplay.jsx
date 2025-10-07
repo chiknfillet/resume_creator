@@ -6,7 +6,7 @@ function ResumeDisplay({generalInfo}) {
             <hr />
             <h2>About Me</h2>
             <hr />
-            <p></p>
+            <p>{generalInfo.aboutMe}</p>
         </section>
     )
 }

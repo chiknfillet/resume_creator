@@ -5,7 +5,7 @@ function AboutMe({ generalInfo, handleChange}) {
         <FieldWrapper title={'About Me'}>
             <textarea 
                 placeholder="Tell us about yourself..." 
-                name='about-me'
+                name='aboutMe' 
                 value={generalInfo.aboutMe}
                 onChange={handleChange}
             />
