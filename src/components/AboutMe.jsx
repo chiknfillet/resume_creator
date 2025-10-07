@@ -1,9 +1,14 @@
 import FieldWrapper from "./FieldWrapper";
 
-function AboutMe() {
+function AboutMe({ generalInfo, handleChange}) {
     return (
         <FieldWrapper title={'About Me'}>
-            <textarea placeholder="Tell us about yourself..." />
+            <textarea 
+                placeholder="Tell us about yourself..." 
+                name='about-me'
+                value={generalInfo.aboutMe}
+                onChange={handleChange}
+            />
         </FieldWrapper>
     );
 }

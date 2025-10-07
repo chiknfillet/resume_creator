@@ -9,7 +9,8 @@ function App() {
   const [generalInfo, setGeneralInfo] = useState({
     name: '',
     email: '',
-    phone: ''
+    phone: '',
+    aboutMe: ''
   });
 
   const handleGeneralInfoChange = (e) => {
@@ -27,11 +28,17 @@ function App() {
           generalInfo={generalInfo}
           handleChange={handleGeneralInfoChange}
         />
-        <AboutMe />
+        <AboutMe 
+          generalInfo={generalInfo}
+          handleChange={handleGeneralInfoChange}
+        />
         <Education />
       </div>
       <div>
-        <ResumeDisplay name={generalInfo.name}/>
+        <ResumeDisplay 
+          generalInfo={generalInfo}
+          handleChange={handleGeneralInfoChange}
+        />
       </div>
     </main>
   )
