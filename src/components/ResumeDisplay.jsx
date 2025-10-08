@@ -1,4 +1,8 @@
-function ResumeDisplay({generalInfo, educations}) {
+function ResumeDisplay({
+    generalInfo, 
+    educations,
+    experiences
+}) {
     return (
         <section>
             <h1>{generalInfo.name}</h1>
@@ -15,6 +19,15 @@ function ResumeDisplay({generalInfo, educations}) {
                     <p>{education.degree}</p>
                     <p>{education.location}</p>
                     <p>{education.description}</p>
+                </div>
+            ))}
+            <h2>Experiences</h2>
+            <hr />
+            {experiences.map(experience => (
+                <div key={experience.id}>
+                    <h4>{experience.companyName}</h4> <span>{experience.startDate} {experience.endDate}</span>
+                    <p>{experience.position}</p>
+                    <p>{experience.responsibilities}</p>
                 </div>
             ))}
         </section>

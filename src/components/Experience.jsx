@@ -65,7 +65,6 @@ function Experience({
                             onClick={() => deleteExperience(experience.id)}>
                             Delete
                         </button>
-                        
                     </div>
                 ))}
             </ul>

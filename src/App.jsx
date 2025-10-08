@@ -93,6 +93,15 @@ function App() {
     });
   }
 
+  function deleteExperience(id) {
+    setExperiences(prev => prev.filter(experience => experience.id !== id));
+  }
+
+  function editExperience(id) {
+    deleteExperience(id)
+    setCurrentExperience(experiences.find(experience => experience.id === id))
+  }
+
   return (
     <main>
       <div>
@@ -116,7 +125,8 @@ function App() {
           currentExperience={currentExperience}
           experiences={experiences}
           handleChange={handleExperienceChange}
-          
+          deleteExperience={deleteExperience}
+          editExperience={editExperience}
           addExperience={addExperience}
         />
       </div>
@@ -124,6 +134,7 @@ function App() {
         <ResumeDisplay 
           generalInfo={generalInfo}
           educations={educations}
+          experiences={experiences}
         />
       </div>
     </main>
