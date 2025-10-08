@@ -8,6 +8,7 @@ function AboutMe({ generalInfo, handleChange}) {
                 name='aboutMe' 
                 value={generalInfo.aboutMe}
                 onChange={handleChange}
+                required
             />
         </FieldWrapper>
     );

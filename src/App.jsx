@@ -12,6 +12,15 @@ function App() {
     phone: '',
     aboutMe: ''
   });
+  const [educations, setEducations] = useState([])
+  const [currentEducation, setCurrentEducation] = useState({
+    schoolName: '',
+    degree: '',
+    location: '',
+    startDate: '',
+    endDate: '',
+    description: ''
+  })
 
   const handleGeneralInfoChange = (e) => {
     const { name, value } = e.target;
@@ -20,6 +29,29 @@ function App() {
       [name]: value
     }));
   };
+
+  const handleEducationChange = (e) => {
+    const { name, value } = e.target;
+    setCurrentEducation(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  function addEducation() {
+    setEducations(prev => [...prev, {
+      ...currentEducation,
+      id: crypto.randomUUID()
+    }]);
+    setCurrentEducation({
+      schoolName: '',
+      degree: '',
+      location: '',
+      startDate: '',
+      endDate: '',
+      description: ''
+    });
+  }
 
   return (
     <main>
@@ -32,7 +64,12 @@ function App() {
           generalInfo={generalInfo}
           handleChange={handleGeneralInfoChange}
         />
-        <Education />
+        <Education 
+          currentEducation={currentEducation}
+          educations={educations}
+          handleChange={handleEducationChange}
+        />
+        <button onClick={addEducation}>Add</button>
       </div>
       <div>
         <ResumeDisplay 
