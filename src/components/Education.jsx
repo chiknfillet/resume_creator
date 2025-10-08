@@ -1,6 +1,12 @@
 import FieldWrapper from "./FieldWrapper";
 
-function AboutMe({currentEducation, educations, handleChange}) {
+function Education({
+    currentEducation, 
+    educations, 
+    handleChange,
+    deleteEducation,
+    editEducation
+}) {
     return (
         <FieldWrapper title={'Education'}>
             <input 
@@ -58,6 +64,15 @@ function AboutMe({currentEducation, educations, handleChange}) {
                         <p>{education.degree}</p>
                         <p>{education.location}</p>
                         <p>{education.description}</p>
+                        <button
+                            onClick={() => editEducation(education.id)}>
+                            Edit
+                        </button>
+                        <button 
+                            onClick={() => deleteEducation(education.id)}>
+                            Delete
+                        </button>
+                        
                     </div>
                 ))}
             </ul>
@@ -66,4 +81,4 @@ function AboutMe({currentEducation, educations, handleChange}) {
     );
 }
 
-export default AboutMe
+export default Education

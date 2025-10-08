@@ -53,6 +53,15 @@ function App() {
     });
   }
 
+  function deleteEducation(id) {
+    setEducations(prev => prev.filter(education => education.id !== id));
+  }
+
+  function editEducation(id) {
+    deleteEducation(id)
+    setCurrentEducation(educations.find(education => education.id === id))
+  }
+  
   return (
     <main>
       <div>
@@ -68,12 +77,15 @@ function App() {
           currentEducation={currentEducation}
           educations={educations}
           handleChange={handleEducationChange}
+          deleteEducation={deleteEducation}
+          editEducation={editEducation}
         />
         <button onClick={addEducation}>Add</button>
       </div>
       <div>
         <ResumeDisplay 
           generalInfo={generalInfo}
+          educations={educations}
         />
       </div>
     </main>
