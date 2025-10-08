@@ -3,6 +3,7 @@ import GeneralInfo from './components/GeneralInfo'
 import AboutMe from './components/AboutMe.jsx'
 import Education from './components/Education.jsx'
 import ResumeDisplay from './components/ResumeDisplay.jsx'  
+import Experience from './components/Experience.jsx'
 import './App.css'
 
 function App() {
@@ -20,6 +21,14 @@ function App() {
     startDate: '',
     endDate: '',
     description: ''
+  })
+  const [experiences, setExperiences] = useState([])
+  const [currentExperience, setCurrentExperience] = useState({
+    companyName: '',
+    position: '',
+    responsibilities: '',
+    startDate: '',
+    endDate: ''
   })
 
   const handleGeneralInfoChange = (e) => {
@@ -62,6 +71,28 @@ function App() {
     setCurrentEducation(educations.find(education => education.id === id))
   }
   
+  const handleExperienceChange = (e) => {
+    const { name, value } = e.target;
+    setCurrentExperience(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  function addExperience() {
+    setExperiences(prev => [...prev, {
+      ...currentExperience,
+      id: crypto.randomUUID()
+    }]);
+    setCurrentExperience({
+      companyName: '',
+      position: '',
+      responsibilities: '',
+      startDate: '',
+      endDate: '',
+    });
+  }
+
   return (
     <main>
       <div>
@@ -79,8 +110,15 @@ function App() {
           handleChange={handleEducationChange}
           deleteEducation={deleteEducation}
           editEducation={editEducation}
+          addEducation={addEducation}
         />
-        <button onClick={addEducation}>Add</button>
+        <Experience
+          currentExperience={currentExperience}
+          experiences={experiences}
+          handleChange={handleExperienceChange}
+          
+          addExperience={addExperience}
+        />
       </div>
       <div>
         <ResumeDisplay 

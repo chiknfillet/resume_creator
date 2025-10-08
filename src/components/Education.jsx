@@ -5,7 +5,8 @@ function Education({
     educations, 
     handleChange,
     deleteEducation,
-    editEducation
+    editEducation,
+    addEducation
 }) {
     return (
         <FieldWrapper title={'Education'}>
@@ -57,6 +58,7 @@ function Education({
                 onChange={handleChange}
                 required
             />
+            <button type="submit" onClick={addEducation}>Add</button>
             <ul className="education-list">
                 {educations.map((education) => (
                     <div key={education.id}>
@@ -76,7 +78,6 @@ function Education({
                     </div>
                 ))}
             </ul>
-            
         </FieldWrapper>
     );
 }
