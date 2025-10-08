@@ -1,4 +1,5 @@
 import FieldWrapper from "./FieldWrapper"
+import '../styles/experience.css'
 
 function Experience({
     currentExperience,
@@ -50,22 +51,29 @@ function Experience({
                 onChange={handleChange}
                 required
             />
-            <button onClick={addExperience}>Add</button>
-            <ul className="experince-list">
+            <button  className="add-btn" onClick={addExperience}>Add</button>
+            <ul className="experience-list">
                 {experiences.map((experience) => (
-                    <div key={experience.id}>
-                        <h4>{experience.companyName}</h4> <span>{experience.startDate} {experience.endDate}</span>
-                        <p>{experience.position}</p>
-                        <p>{experience.responsibilities}</p>
-                        <button
-                            onClick={() => editExperience(experience.id)}>
-                            Edit
+                    <li key={experience.id} className="experience-item">
+                    <div className="experience-header">
+                        <h4 className="company-name">{experience.companyName}</h4>
+                        <span className="date-range">
+                        {experience.startDate} - {experience.endDate}
+                        </span>
+                    </div>
+
+                    <p className="position">{experience.position}</p>
+                    <p className="responsibilities">{experience.responsibilities}</p>
+
+                    <div className="experience-actions">
+                        <button className="edit-btn" onClick={() => editExperience(experience.id)}>
+                        Edit
                         </button>
-                        <button 
-                            onClick={() => deleteExperience(experience.id)}>
-                            Delete
+                        <button className="delete-btn" onClick={() => deleteExperience(experience.id)}>
+                        Delete
                         </button>
                     </div>
+                    </li>
                 ))}
             </ul>
         </FieldWrapper>

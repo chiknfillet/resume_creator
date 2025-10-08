@@ -1,0 +1,93 @@
+.experience-list * {
+    margin: 0;
+    padding: 0;
+}
+
+.experience-list {
+  list-style: none;
+  padding: 0;
+  padding-top: 10px;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.experience-item {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.experience-item:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transform: translateY(-2px);
+}
+
+
+.experience-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.company-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--primary);
+}
+
+.date-range {
+  font-size: 0.9rem;
+  color: #6b7280;
+}
+
+.position {
+  font-weight: 500;
+  color: var(--text);
+}
+
+.responsibilities {
+  color: #475569;
+  font-size: 0.95rem;
+}
+
+.experience-actions {
+  margin-top: 0;
+  display: flex;
+  justify-content: end;
+  gap: 0.5rem;
+}
+
+.experience-actions button {
+  padding: 0.4rem 0.8rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.edit-btn {
+  background: var(--primary);
+  color: #fff;
+}
+
+.edit-btn:hover {
+  background: var(--secondary);
+}
+
+.delete-btn {
+  background: #ef4444;
+  color: #fff;
+}
+
+.delete-btn:hover {
+  background: #b91c1c;
+}

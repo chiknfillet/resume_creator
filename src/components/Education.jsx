@@ -1,4 +1,5 @@
 import FieldWrapper from "./FieldWrapper";
+import '../styles/education.css'
 
 function Education({
     currentEducation, 
@@ -58,24 +59,36 @@ function Education({
                 onChange={handleChange}
                 required
             />
-            <button type="submit" onClick={addEducation}>Add</button>
+            <button className="add-btn" type="submit" onClick={addEducation}>Add</button>
             <ul className="education-list">
                 {educations.map((education) => (
-                    <div key={education.id}>
-                        <h4>{education.schoolName}</h4> <span>{education.startDate} {education.endDate}</span>
-                        <p>{education.degree}</p>
-                        <p>{education.location}</p>
-                        <p>{education.description}</p>
-                        <button
-                            onClick={() => editEducation(education.id)}>
-                            Edit
-                        </button>
-                        <button 
-                            onClick={() => deleteEducation(education.id)}>
-                            Delete
-                        </button>
-                        
+                    <li key={education.id} className="education-item">
+                    <div className="education-header">
+                        <h4 className="school-name">{education.schoolName}</h4>
+                        <span className="date-range">
+                            {education.startDate} - {education.endDate}
+                        </span>
                     </div>
+
+                    <p className="degree">{education.degree}</p>
+                    <p className="location">{education.location}</p>
+                    <p className="description">{education.description}</p>
+
+                    <div className="education-actions">
+                        <button
+                            className="edit-btn"
+                            onClick={() => editEducation(education.id)}
+                        >
+                        Edit
+                        </button>
+                        <button
+                            className="delete-btn"
+                            onClick={() => deleteEducation(education.id)}
+                        >
+                        Delete
+                        </button>
+                    </div>
+                    </li>
                 ))}
             </ul>
         </FieldWrapper>

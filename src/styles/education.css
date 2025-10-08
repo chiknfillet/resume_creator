@@ -1,0 +1,80 @@
+.education-list * {
+    margin: 0;
+    padding: 0;
+}
+
+.education-list {
+  list-style: none;
+  padding: 0;
+  padding-top: 10px;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.education-item {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.education-item:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transform: translateY(-2px);
+}
+
+.education-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.school-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.date-range {
+  font-size: 0.9rem;
+  color: var(--text);
+}
+
+.degree {
+  font-weight: 500;
+  color: var(--text);
+}
+
+.location {
+  color: #475569;
+  font-size: 0.95rem;
+}
+
+.description {
+  color: #475569;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.education-actions {
+  display: flex;
+  justify-content: end;
+  gap: 0.5rem;
+}
+
+.education-actions button {
+  padding: 0.4rem 0.8rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+

@@ -104,7 +104,7 @@ function App() {
 
   return (
     <main>
-      <div>
+      <div className='form'>
         <GeneralInfo 
           generalInfo={generalInfo}
           handleChange={handleGeneralInfoChange}
@@ -130,7 +130,7 @@ function App() {
           addExperience={addExperience}
         />
       </div>
-      <div>
+      <div className='resume'>
         <ResumeDisplay 
           generalInfo={generalInfo}
           educations={educations}
