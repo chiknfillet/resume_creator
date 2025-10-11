@@ -1,3 +1,29 @@
 .center {
     text-align: center;
 }
+
+.education-list h4,
+.experience-list h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.education-list span,
+.experience-list span {
+  font-size: 0.9rem;
+  color: var(--text);
+}
+
+.list-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.education-list p,
+.experience-list p {
+  font-size: 0.9rem;
+  color: var(--text);
+  line-height: 1.4;
+}

@@ -33,17 +33,21 @@ function ResumeDisplay({
             {educations.length === 0 ? (
                 <p className="placeholder">No Education added yet</p>
             ) : (
-                educations.map(education => (
-                    <div key={education.id}>
-                    <h4>{education.schoolName}</h4>
-                    <span>
-                        {education.startDate} - {education.endDate}
-                    </span>
-                    <p>{education.degree}</p>
-                    <p>{education.location}</p>
-                    <p>{education.description}</p>
-                    </div>
-                ))
+                <div className="education-list">
+                    {educations.map(education => (
+                        <div key={education.id}>
+                            <div className='list-header'>
+                                <h4>{education.schoolName}</h4>
+                                <span>
+                                    {education.startDate} - {education.endDate}
+                                </span>
+                            </div>
+                            <p>{education.degree}</p>
+                            <p>{education.location}</p>
+                            <p>{education.description}</p>
+                        </div>
+                    ))}
+                </div>
             )}
             
             <h2>Experiences</h2>
@@ -51,16 +55,20 @@ function ResumeDisplay({
             {experiences.length === 0 ? (
                 <p className="placeholder">No Experience added yet</p>
             ) : (
-                experiences.map(experience => (
-                    <div key={experience.id}>
-                    <h4>{experience.companyName}</h4>
-                    <span>
-                        {experience.startDate} - {experience.endDate}
-                    </span>
-                    <p>{experience.position}</p>
-                    <p>{experience.responsibilities}</p>
-                    </div>
-                ))
+                <div className="experience-list">
+                    {experiences.map(experience => (
+                        <div key={experience.id}>
+                            <div className='list-header'>
+                                <h4>{experience.companyName}</h4>
+                                <span>
+                                    {experience.startDate} - {experience.endDate}
+                                </span>
+                            </div>
+                            <p>{experience.position}</p>
+                            <p>{experience.responsibilities}</p>
+                        </div>
+                    ))}
+                </div>
             )}
         </section>
     )
