@@ -51,7 +51,7 @@ hr {
 .form {
   width: 400px;
   border-radius: 12px;
-  box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+  box-shadow: 0 2px 16px rgba(0,0,0,0.1);
   padding: 32px 24px;
   margin-bottom: 24px;
 }
@@ -62,13 +62,38 @@ hr {
 }
 
 .resume {
-  min-width: 400px;
-  border-radius: 12px;
-  box-shadow: 0 2px 16px rgba(0,0,0,0.08);
-  padding: 32px 24px;
+  width: 210mm; 
+  min-height: 297mm; 
+  padding: 20mm;
+  box-sizing: border-box;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.1);
+}
+
+.resume-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.resume-section button {
+  background-color: var(--primary);
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.resume-section button:hover {
+  background-color: var(--secondary);
 }
 
 .placeholder {
   color: var(--muted);
   font-style: italic;
 }
+

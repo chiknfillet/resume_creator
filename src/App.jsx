@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import downloadPDF from './components/DownloadPDF.jsx'
 import GeneralInfo from './components/GeneralInfo'
 import AboutMe from './components/AboutMe.jsx'
 import Education from './components/Education.jsx'
@@ -130,13 +131,17 @@ function App() {
           addExperience={addExperience}
         />
       </div>
-      <div className='resume'>
-        <ResumeDisplay 
-          generalInfo={generalInfo}
-          educations={educations}
-          experiences={experiences}
-        />
+      <div className='resume-section'>
+        <div className='resume'>
+          <ResumeDisplay 
+            generalInfo={generalInfo}
+            educations={educations}
+            experiences={experiences}
+          />
+        </div>
+        <button onClick={downloadPDF}>Download PDF</button>
       </div>
+      
     </main>
   )
 }
