@@ -1,16 +1,33 @@
-# React + Vite
+# 🧾 Resume Creator (React)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A sleek and interactive **Resume Creator** built with **React**, allowing users to create, preview, and download professional resumes with ease.  
+Enter your personal details, education, experience, and skills — then export your resume as a **PDF** in just one click!
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Live Demo
 
-## React Compiler
+🎯 **Try it here:** [Resume Creator Live Demo](https://chiknfillet-resumecreator.netlify.app/)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+![App Preview](https://drive.google.com/uc?export=view&id=1gnVpIVQuIa-cwzwshdDZjowSHIiB5_kN)
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## ✨ Features
+
+- 🧍 **User Information Form** – Add your name, contact info, and summary  
+- 🎓 **Education & Experience Sections** – Dynamically add multiple entries  
+- ⚙️ **Real-Time Preview** – See changes instantly as you type  
+- 🧾 **Download as PDF** – Export your resume in one click  
+- 🎨 **Responsive Design** – Optimized for desktop and mobile  
+- 💾 **Local Storage (optional)** – Automatically save your progress  
+
+---
+
+## 🛠️ Tech Stack
+
+- **React** – UI framework  
+- **React Hooks** – State and lifecycle management  
+- **HTML & CSS** – Styling  
+- **jsPDF / html2canvas** – PDF generation  
+- **Vite / Create React App** – Development setup  
